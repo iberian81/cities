@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>  </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-label>Ville</ion-label>
+        <p> {{selectedCity.ville}} </p>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Pays</ion-label>
+        <p> {{selectedCity.pays}} </p>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Continent</ion-label>
+        <p> {{selectedCity.continent}} </p>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Population</ion-label>
+        <p> {{selectedCity.population}} </p>
+      </ion-item>
+  
+    </ion-list>
+  
+  </ion-content>
+  
+  <ion-footer>
+    <ion-toolbar>
+      <ion-button expand="block" routerLink="/home">Go back home
+        <ion-icon name="home" slot="end"></ion-icon>
+      </ion-button>
+    </ion-toolbar>
+  </ion-footer>
+  
