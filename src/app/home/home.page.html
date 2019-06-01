@@ -1,14 +1,29 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
-</ion-content>
+    <ion-toolbar>
+      <ion-title>
+        {{title}}
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let city of cityList" >
+        <ion-label (click)="showDetail(city.id)"> {{city.ville}} </ion-label>
+        <ion-button color="danger" slot="end" (click)="deleteCity(city.id)">
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+        <ion-button slot="end" (ionChange)="updateCity(city)">
+          <ion-icon name="create" ></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+    
+   
+  </ion-content>
+  
+  <ion-footer>
+    <ion-toolbar>
+      <ion-button routerLink="/form" color="primary" expand="block" >Add city</ion-button>
+    </ion-toolbar>
+  </ion-footer>
