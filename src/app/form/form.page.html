@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar><ion-icon routerLink="/home" name="arrow-back"></ion-icon>
+      <ion-title>form</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+  
+      <ion-item>
+        <ion-label position="floating">Ville</ion-label>
+        <ion-input type="text" [(ngModel)]="city.ville"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Pays</ion-label>
+        <ion-input type="text" [(ngModel)]="city.pays"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating">Continent</ion-label>
+        <ion-input type="text" [(ngModel)]="city.continent"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Population</ion-label>
+        <ion-input type="text" [(ngModel)]="city.population"></ion-input>
+      </ion-item>
+  
+  
+    </ion-list>
+  
+  </ion-content>
+  
+  <ion-footer>
+    <ion-toolbar>
+      <ion-button expand="block" (click)="addCity()" >Valider</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+  
